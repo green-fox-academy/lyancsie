@@ -1,0 +1,85 @@
+/*Ha valaminek van egy random paddingje vagy property-je, akkor az összes szülőjénél beállítom az adott propertyt, amíg nem lesz jó*/
+
+*{    
+   color:coral; /*Nem szerencsés használni, mert nehezen felülírható (!important)*/
+   
+}
+#content{
+background-image: url("topography.png")!important;
+padding: 100px 20px 20px 0px;
+font-size:2vw;
+color:coral;
+}
+body{
+    padding:10px;
+}
+div{
+    font-size:3vw;
+    padding: 10px;
+}
+
+
+.menu{
+    box-sizing:border-box;
+    border:0;
+    margin:0;
+    padding: 0;
+    width:95%;
+    display: inline-block;
+    background-color:white;
+    position:fixed;
+    z-index:5;
+    text-align: center;
+    
+}
+.menupont{
+
+border-width: 0px;
+display:inline-block;
+width:30%;
+float:none;
+text-align:center;
+font-family:Arial Black;
+align-content:center;
+text-decoration:none;
+    font-size:3vw;
+}
+.menupont:hover{
+    background-color:cornsilk;
+}
+.menupont:active{
+    background-color:wheat;
+    color:black; /*miért nem működik?*/
+}
+p{
+    text-align:justify;
+    width:100%;
+    text-overflow:clip;
+    font-size:2vw;
+    padding: 10px;
+}
+ul{
+    display:inline-block;
+    list-style-type:circle;
+    width:80%;
+    padding:0;
+}
+h1{
+    padding:10px;
+}
+#stuff{
+    text-align:center;
+    font-size:3vw;
+    padding: 10px;
+
+}
+
+img{
+    display:block;
+    text-align:center;
+    width:60%;
+}
+
+#goals{
+    color:firebrick;
+}
