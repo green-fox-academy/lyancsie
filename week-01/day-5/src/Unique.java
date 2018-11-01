@@ -1,19 +1,34 @@
-        public class Unique {
-            public static void main(String[] args) {
-                System.out.println(unique(new int[] {1, 11, 34, 11, 52, 61, 1, 34}));
-            }
-            public static int[] unique(int arg[]){
-                for(int i=0;i<arg.length;i++){
-                for(int j=0;j<arg.length;j++){
-                    if(i != j && arg[i]==arg[j]){
-                        arg[i]=0; //működik, de nem 100%-os
-                    }
-                }}
-                for(int i=0; i<arg.length;i++){
-                    System.out.println(arg[i]);
+public class Unique {
+    public static void main(String[] args) {
+        System.out.println((unique(new Integer[]{1, 11, 34, 11, 52, 61, 1, 34})));
+    }
+
+    public static String unique(Integer arg[]) {
+        int num = 0;
+        for (int i = 0; i < arg.length; i++) {
+            for (int j = 0; j < arg.length; j++) {
+                if (i != j && arg[i] == arg[j] && arg[i] != null && arg[j] != null) {
+                    arg[i] = null; //működik, de nem 100%-os
+                    num = num + 1;
+//teszt a num-ra    System.out.println("num = " + num);
                 }
-                return arg;
-            }}
+            }
+        }
+        Integer myNewArray[] = new Integer[arg.length - num];
+        for (int i = 0; i < arg.length - num; i++) {
+            if (arg[i] != null) {
+                for (int j = 0; j < myNewArray.length - 1; j++) {
+                    myNewArray[j] = arg[i];
+
+                }
+            }
+
+        }
+        return myNewArray.toString();
+
+    }
+}
+
 
 
 

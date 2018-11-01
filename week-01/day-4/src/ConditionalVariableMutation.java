@@ -13,7 +13,7 @@ public class ConditionalVariableMutation {
         // if less than 10 set out2 to "Less!",
         // if more than 20 set out2 to "More!"
         if (b >= 10 && b <= 20) {
-            System.out.println("You're sweet, asshole");
+            System.out.println("Sweet");
         } else if (b < 10) {
             System.out.println("Less");
         } else {
@@ -29,12 +29,14 @@ public class ConditionalVariableMutation {
         // if credits are smaller than 50,
         // and isBonus is false decrement c by 1
         // if isBonus is true c should remain the same
-        if (isBonus=false){
-        if(credits>=50){c-=2;}
-            else {c-=1;}
-        System.out.println(c);}
-
-
+        if (isBonus = false) {
+            if (credits >= 50) {
+                c -= 2;
+            } else {
+                c -= 1;
+            }
+            System.out.println(c);
+        }
 
 
         int d = 8;
@@ -46,9 +48,13 @@ public class ConditionalVariableMutation {
         // if time is more than 200
         // set out3 to "Time out"
         // otherwise set out3 to "Run Forest Run!"
-    if(d%4==0 && time<=200){out3="check";}
-    else if(time>200){out3="Time out";}
-    else {out3="Run Forest Run!";}
+        if (d % 4 == 0 && time <= 200) {
+            out3 = "check";
+        } else if (time > 200) {
+            out3 = "Time out";
+        } else {
+            out3 = "Run Forest Run!";
+        }
 
         System.out.println(out3);
     }

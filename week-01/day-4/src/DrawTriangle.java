@@ -22,6 +22,7 @@ public class DrawTriangle {
             lokal=i;
             }
             if(lokal==a){
+                star=star.substring(0, star.length() -1);
             for(int k=a;k>0;k--){
                 star=star.substring(0, star.length() -1);
                 System.out.println(star);

@@ -1,5 +1,6 @@
 import java.util.*;
 import java.lang.String;
+
 public class Anagram {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
@@ -18,7 +19,7 @@ public class Anagram {
         } else {
             for (int i = 0; i < str1.length(); i++) {
                 for (int j = 0; j < str2.length(); j++) {
-                    if ((matched[i] == false) && (matched2[j] == false)) {
+                    if ((!matched[i]) && (matched2[j] == false)) {
                         if (str1.charAt(i) == str2.charAt(j)) {
                             matched[i] = true;
                             matched2[j] = true;
@@ -26,10 +27,15 @@ public class Anagram {
                     }
                 }
             }
-           for(int i=0;i<str1.length();i++){
-           if (matched[i] == false){return false;}
-               }
-    }return true;}}
+            for (int i = 0; i < str1.length(); i++) {
+                if (matched[i] == false) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
 
 
 

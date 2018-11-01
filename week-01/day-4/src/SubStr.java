@@ -1,4 +1,5 @@
 public class SubStr {
+
     public static void main(String[] args) {
         //  Create a function that takes two strings as a parameter
         //  Returns the starting index where the second one is starting in the first one
@@ -12,20 +13,51 @@ public class SubStr {
     }
 
     public static int subStr(String input, String q) {
-        int value=-1;
-        int j=1;
-        int k;
-        for (k = 1; k < input.length() - 1; k++){
-            for(j = 1 ; j <q.length() - 1; j++){
-            if(input.charAt(k)==q.charAt(j)){
-                    System.out.println("Yup"); // to check what's happening here. I know what the mistake is, but just way too knackered to solve it.
-                    value=k;
-                    break;
+        int counter = 0;
+        int value = 0;
+        for (int j = 0; j < input.length(); j++) {
+            if (counter == q.length()) {
+                return j;
+            }
+            if (input.charAt(j) == q.charAt(0)) {
+                counter++;
+                if (counter == q.length()) {
+                    return j;
+                }
+                value = j;
+                for (int k = 1; k < q.length(); k++) {
+                    if (input.length() <= j + k) {
+                        if (input.length() == q.charAt(k)) {
+                            counter++;
+                            if (counter == q.length()) {
+                                return value;
+                            }
+                        } else {
+                            counter = 0;
+                            break;
+                        }
+                    }
+                    if (input.charAt(j + k) == q.charAt(k)) {
+                        counter++;
+                        if (counter == q.length()) {
+                            return value;
+                        }
+                    } else {
+                        counter = 0;
+                        break;
+                    }
                 }
             }
-            }
-            return value;}
-                }
+        }
+
+
+        if (counter == q.length()) {
+            return value;
+        } else {
+            return -1;
+        }
+    }
+}
 
 
 

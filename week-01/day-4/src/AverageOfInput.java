@@ -1,7 +1,8 @@
 import java.util.Scanner;
+
 public class AverageOfInput {
     public static void main(String[] args) {
-        System.out.println("Give me how many numbers1 you'll give: ");
+        System.out.println("Give me how many numbers you'll write8: ");
         Scanner read = new Scanner(System.in);
         int k = read.nextInt();
         int sum = 0;
