@@ -42,22 +42,21 @@ public class StudentCounter {
         row5.put("candies", 2);
         map.add(row5);
         String names = "";
-        Object sum=0;
+        Object sum = 0;
         for (int i = 0; i < map.size(); i++) {
             if ((Integer) map.get(i).get("candies") > 4) {
                 names += map.get(i).get("name") + " ";
             }
-            if((Integer) map.get(i).get("candies") < 5){
-                sum = ((Integer) sum).doubleValue() + map.get(i).get("age");
+      /*      if((Integer) map.get(i).get("candies") < 5){
+                sum = ((Integer) sum).doubleValue() + map.get(i).get("age");  - not working yet */
 
-            }
         }
-            System.out.println(names);
-            System.out.println(sum);
 
+        System.out.println(names);
+        System.out.println(sum);
+    }
             // Display the following things:
             //  - Who has got more candies than 4 candies
             //  - Sum the age of people who have lass than 5 candies
 
     }
-}
