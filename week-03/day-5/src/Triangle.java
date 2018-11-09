@@ -17,7 +17,7 @@ public class Triangle {
     public static void Triangles(int[] x, int[] y, Graphics graphics) {
         int size = 40;
         int column = 22;
-        int max = 22;
+        int max = 10;
         int[] xref = x.clone();
         int[] yref = y.clone();
         for (int i = column; i > 0; i--) {
@@ -34,14 +34,12 @@ public class Triangle {
                 }
             }
         }
-
-
         //   }
 
 
     // Don't touch the code below
-    static int WIDTH = 320;
-    static int HEIGHT = 320;
+    static int WIDTH = 600;
+    static int HEIGHT = 600;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");

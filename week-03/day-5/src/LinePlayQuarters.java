@@ -4,22 +4,29 @@ import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class LinePlayQuarters {
-    public static void mainDraw (Graphics graphics) {
+    public static void mainDraw(Graphics graphics) {
+        int n = 2;
+        int k=0;
+        int x1=20;
+        for (int i = 1; i<=n; i++) {
+            x1=linePlay(graphics, x1, 0, 0, 0, 2)+20;
 
-        linePlay(graphics, 20, 0, 0 , 0, 2 );
-      //  linePlay(graphics,100, 0, 0, 200, 2 );
-    }
 
-    public static void linePlay( Graphics graphics, int x1, int x2, int y1, int y2, int n) {
-       for(int i=x1; i<=WIDTH/n; i+=10){
-            x1+=10;
-            x2=50+WIDTH/n;
-            y1=0;
-            y2+=10;
-            graphics.drawLine(x1,y1, x2,y2);
+}}
+
+    public static int linePlay(Graphics graphics, int x1, int x2, int y1, int y2, int n) {
+        for (int i = x1; i < WIDTH/n; i += 10) { // probably don't need to put a loop here
+            x1 += 10;
+            x2 = WIDTH / n;
+            y1 = 0;
+            y2 += 10;
+            graphics.drawLine(x1, y1, x2, y2);
+            if(x1>=WIDTH/n){return x1;}
         }
-        x1=0; x2=0; y2=HEIGHT; y1=100;
-        graphics.setColor(Color.PINK);
+        return x1;
+
+
+        //graphics.setColor(Color.PINK);
 
  /*       for(int i=1; i<23; i++){
             x2+=10;
