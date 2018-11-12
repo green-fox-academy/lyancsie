@@ -1,5 +1,5 @@
 import javax.swing.*;
-
+import java.lang.Math.*;
 import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
@@ -7,8 +7,8 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class Triangle {
     public static void mainDraw(Graphics graphics) {
 
-        int x[] = {300, 320, 340};
-        int y[] = {600, 570, 600};
+        int x[] = {0, 20, 40};
+        int y[] = {300, 265, 300};
 
         Triangles(x, y, graphics);
     }
@@ -16,8 +16,9 @@ public class Triangle {
 
     public static void Triangles(int[] x, int[] y, Graphics graphics) {
         int size = 40;
+        double height = (double)(size/2)*(Math.sqrt(3));
         int column = 22;
-        int max = 10;
+        int max = 8;
         int[] xref = x.clone();
         int[] yref = y.clone();
         for (int i = column; i > 0; i--) {
@@ -29,7 +30,7 @@ public class Triangle {
                 }
             }
                 for (int ymod = 0; ymod < y.length; ymod++) {
-                    y[ymod] -= size;
+                    y[ymod] -= height;
                     x[ymod] = xref[ymod] + (column - i+1) * size/2;
                 }
             }

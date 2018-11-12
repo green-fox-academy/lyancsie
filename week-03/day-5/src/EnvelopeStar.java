@@ -7,16 +7,14 @@ public class EnvelopeStar {
     public static void mainDraw(Graphics graphics) {
         graphics.setColor(Color.RED);
         EnvelopeStar(WIDTH / 2, WIDTH / 2, 0, HEIGHT / 2, graphics);
-        //       EnvelopeStar(WIDTH/2,WIDTH,0,HEIGHT, graphics);
-        //       EnvelopeStar(0,WIDTH/2,HEIGHT/2,HEIGHT, graphics);
-        //       EnvelopeStar(WIDTH/2,WIDTH,HEIGHT,HEIGHT/2, graphics);
     }
 
     public static void EnvelopeStar(int x1, int x2, int y1, int y2, Graphics g) {
+        int dens=40; //has to be a divisor of canvas WIDTH & HEIGHT
         while (x2 >= 0) {
             g.drawLine(x1, y1, x2, y2);
-            y1 += 10;
-            x2 -= 10;
+            y1 += dens;
+            x2 -= dens;
             if (x2 == 0) {
                 System.out.println(x1 + " " + y1 + " " + x2 + " " + y2);
                 break;
@@ -26,8 +24,8 @@ public class EnvelopeStar {
         if (x2 == 0) {
             while (x2 <= WIDTH / 2) {
                 g.drawLine(x2, y2, x1, y1);
-                x2 += 10;
-                y1 += 10;
+                x2 += dens;
+                y1 += dens;
                 System.out.println(x1 + " " + y1 + " " + x2 + " " + y2);
                 if (x2 == WIDTH / 2) {
                     break;
@@ -37,8 +35,8 @@ public class EnvelopeStar {
         if (x2 == WIDTH / 2) {
             while (x2 <= WIDTH) {
                 g.drawLine(x2, y2, x1, y1);
-                x2 += 10;
-                y1 -= 10;
+                x2 += dens;
+                y1 -= dens;
                 System.out.println(x1 + " " + y1 + " " + x2 + " " + y2);
                 if (x2 == WIDTH) {
                     break;
@@ -47,8 +45,8 @@ public class EnvelopeStar {
             if (x2 == WIDTH) {
                 while (x2 >= WIDTH/2) {
                     g.drawLine(x2, y2, x1, y1);
-                    x2 -= 10;
-                    y1 -= 10;
+                    x2 -= dens;
+                    y1 -= dens;
                     System.out.println(x1 + " " + y1 + " " + x2 + " " + y2);
                     if (x2 == WIDTH/2) {
                         break;

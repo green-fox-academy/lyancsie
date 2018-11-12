@@ -29,11 +29,10 @@ public class GuessMyNumber {
                     System.out.println("Too big! Your remaining lives: " + lives);
                     System.out.println("Give me your guess!");
                 } else {
-                    if (guess < rand) {
-                        lives -= 1;
-                        System.out.println("Too small! Your remaining lives: " + lives);
-                        System.out.println("Give me your guess!");
-                    }
+                    lives -= 1;
+                    System.out.println("Too small! Your remaining lives: " + lives);
+                    System.out.println("Give me your guess!");
+
                 }
             }
         }
