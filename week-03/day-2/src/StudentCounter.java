@@ -10,6 +10,7 @@ public class StudentCounter {
         row0.put("name", "Theodor");
         row0.put("age", 9.5);
         row0.put("candies", 2);
+        row0.put("muscles", 5.7);
         map.add(row0);
 
         Map<String, Object> row1 = new HashMap<String, Object>();
