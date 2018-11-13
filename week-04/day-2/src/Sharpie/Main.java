@@ -8,5 +8,14 @@ public class Main {
         System.out.println(bSharpie.inkAmount);
         aSharpie.use();
         System.out.println(aSharpie.inkAmount);
+
+        SharpieSet myList = new SharpieSet();
+
+        //System.out.println(myList.c.inkAmount) == 50;
+
+        System.out.println(myList.countUsable());
+        myList.removeTrash();
+        System.out.println(myList.countUsable());
     }
+
 }

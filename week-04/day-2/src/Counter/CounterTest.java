@@ -1,4 +1,4 @@
-package Counter;
+/*package Counter;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by aze on 2017.03.29..
- */
+
 class CounterTest {
 
   Counter c = new Counter();
@@ -50,3 +50,4 @@ class CounterTest {
   }
 
 }
+*/
