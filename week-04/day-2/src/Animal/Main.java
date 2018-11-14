@@ -1,4 +1,4 @@
-package Animal;
+package Animal; //nullPointerException in Farm (thus in main as well)
 
 public class Main {
   public static void main(String[] args) {
