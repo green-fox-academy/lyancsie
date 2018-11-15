@@ -11,13 +11,11 @@ public class SumDigit {
     }
 
   private static int sumDigit(int n){
-      int sum = 0;
       if(n==0) {
      return n;
       }
     else {
-      sum += n % 10; //521 --> 1
-      return (sum + sumDigit( n /10)); // 1 + 2; 1 + 2 + 5
+      return (n % 10 + sumDigit( n /10)); // 1 + 2; 1 + 2 + 5
    }
   }
 }
