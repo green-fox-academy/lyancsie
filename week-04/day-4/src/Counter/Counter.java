@@ -12,7 +12,7 @@ public class Counter {
   private static int counter(int n){
     System.out.println(n);
     if(n==1){
-      return 1;
+      return n;
     }
     else{counter(n-1);}
     return n;
