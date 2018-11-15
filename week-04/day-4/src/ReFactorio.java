@@ -9,12 +9,11 @@ public class ReFactorio {
     System.out.println(reFactorio(n));
   }
 
-  public static int reFactorio(int n){
-    if(n==1){
+  public static int reFactorio(int n) {
+    if (n == 1) {
       return n;
-    }
-    else{
-      return n * reFactorio(n-1);
+    } else {
+      return n * reFactorio(n - 1);
     }
   }
 }
