@@ -1,3 +1,5 @@
+package ReFactorio;
+
 import java.util.Scanner;
 
 public class ReFactorio {

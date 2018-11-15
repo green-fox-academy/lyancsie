@@ -25,7 +25,7 @@ public class Pirate {
     if (state == 0 || state == 1) {
       if (count < 4) {
         System.out.println("Pour me anudder!");
-      } else if(state != 2 && count >= 4) {
+      } else if (state != 2 && count >= 4) {
         state = 1;
         System.out.println("Arghh, I'ma Pirate. How d'ya d'ink its goin?");
       }
