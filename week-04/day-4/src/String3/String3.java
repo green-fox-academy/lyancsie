@@ -12,7 +12,7 @@ public class String3 {
     int a = n.length();
     System.out.println(stringChanger(n, a));
   }
-//string index out of range
+
   private static String stringChanger(String input, int a) {
     if (a == 0) {
       input = '*' + input.substring(a);

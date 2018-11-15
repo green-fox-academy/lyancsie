@@ -16,13 +16,13 @@ public class String1 {
   private static String stringChanger(String input, int a) {
 
     if (a == 0) {
-      input = 'y' + input.substring(a+1);
+      input = 'y' + input.substring(a + 1);
       return input;
     } else {
       if (input.charAt(a) == 'x') {
-        input = input.substring(0, a) + 'y' + input.substring(a+1);
+        input = input.substring(0, a) + 'y' + input.substring(a + 1);
       }
-      return stringChanger(input, a-1);
+      return stringChanger(input, a - 1);
     }
   }
 }
