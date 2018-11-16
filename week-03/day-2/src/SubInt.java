@@ -24,7 +24,7 @@ public class SubInt {
         for (int i = 0; i < list2.length; i++) {
             for (int j = 0; j <= Math.log10(list[i]+1); j++) {
                 if ((String.valueOf(list2[i].charAt(j))).equals(String.valueOf(id))) {
-                    output.add(list2[i]);
+                    output.add(String.valueOf(i));
                     break;
                 }
             }

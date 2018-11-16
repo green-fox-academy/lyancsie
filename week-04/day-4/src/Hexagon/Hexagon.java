@@ -9,7 +9,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Hexagon {
   public static void mainDraw(Graphics graphics) {
-    drawCross(WIDTH / 2,HEIGHT / 2,WIDTH / 2,5,graphics);
+    drawCross(WIDTH / 2,HEIGHT / 2,WIDTH / 2,12,graphics);
   }
 
   public static void drawCross(int xPos, double yPos, int side, int n, Graphics graphics) {

@@ -7,15 +7,15 @@ import java.util.Scanner;
 // Volume: 1000
 public class Cuboid {
 
-    public static void main(String[] args) {
-        System.out.println("a = ");
-        Scanner read = new Scanner(System.in);
-        int a = read.nextInt();
-        System.out.println("b = ");
-        int b = read.nextInt();
-        System.out.println("c = ");
-        int c = read.nextInt();
-        System.out.println("Surface: " + a * b);
-        System.out.println("Volume: " + a * b * c);
-    }
+  public static void main(String[] args) {
+    System.out.println("a = ");
+    Scanner read = new Scanner(System.in);
+    int a = read.nextInt();
+    System.out.println("b = ");
+    int b = read.nextInt();
+    System.out.println("c = ");
+    int c = read.nextInt();
+    System.out.println("Surface: " + a * b);
+    System.out.println("Volume: " + a * b * c);
+  }
 }

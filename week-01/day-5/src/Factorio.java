@@ -11,7 +11,7 @@ public class Factorio {
     public static int factorio(int i) {
         int res = 1;
         for (int k = 1; k <= i; k++) {
-            res = res * k;
+            res *= k;
         }
         return res;
     }
