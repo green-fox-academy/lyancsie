@@ -6,5 +6,6 @@ public class F35 extends Aircraft {
     maxAmmo = 12;
     baseDmg = 50;
     ammoStore = 0;
+    priority = true;
   }
 }

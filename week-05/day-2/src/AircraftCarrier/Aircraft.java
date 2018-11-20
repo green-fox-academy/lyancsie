@@ -5,27 +5,30 @@ public abstract class Aircraft {
   int maxAmmo;
   int baseDmg;
   int ammoStore;
+  boolean priority;
   
   public Aircraft() {
     ammoStore = 0;
+    priority=false;
   }
   
-  public void fight() {
+  public void fight(Aircraft opponent) {
   
   }
   
   public void refill() {
-  
+    ammoStore = maxAmmo;
   }
   
-  public void getType() {
+  public String getType() {
+    return getClass().getSimpleName();
   }
   
   public void getStatus() {
-  
+    System.out.println("Type: " + getType() + "Ammo: " + ammoStore + "Base dmg: " + baseDmg + " All damage: " + baseDmg*ammoStore);
   }
   
-  public void isPriority() {
-  
+  public boolean isPriority() {
+    return priority;
   }
 }
