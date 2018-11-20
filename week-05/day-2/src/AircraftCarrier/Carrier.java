@@ -39,21 +39,21 @@ public class Carrier {
     for (Aircraft aSquad : squad) {
       if (ammo > 0) {
         if (this.ammo >= aSquad.getAmmoStore()) {
-          try {
             if (aSquad.isPriority()) {
               aSquad.refill(ammo);
               this.ammo -= aSquad.getAmmoStore();
               ammo -= aSquad.getAmmoStore();
             }
-          } catch (Exception x) {
-            System.out.println("Refill failed");
           }
         }
       }
-    }
+    
     for (Aircraft aSquad : squad) {
       if (ammo > 0) {
-        aSquad.refill(ammo);
+        if (this.ammo >= aSquad.getAmmoStore()) {
+          aSquad.refill(ammo);
+          ammo -= aSquad.getAmmoStore();
+        }
       }
     }
   }

@@ -32,15 +32,17 @@ public abstract class Aircraft {
     this.priority = priority;
   }
   
-  void refill(int ammo) {
-    if (ammo >= maxAmmo) {
+  int refill(int ammo) {
+    if (ammo <= maxAmmo) {
       ammoStore = ammo;
-      ammo -= ammoStore;
+      ammo = 0 ;
     }
-    ammoStore += ammo;
-    return;
+    if (ammo >= maxAmmo) {
+      ammo -= maxAmmo - this.getAmmoStore();
+      ammoStore = maxAmmo;
+    }
+    return ammo;
   }
-  
   private String getType() {
     return getClass().getSimpleName();
   }
