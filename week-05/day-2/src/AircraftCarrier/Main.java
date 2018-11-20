@@ -3,8 +3,8 @@ package AircraftCarrier;
 public class Main {
   
   public static void main(String[] args) {
-    Carrier c1 = new Carrier(1000, 5000);
-    Carrier c2 = new Carrier(1000, 100);
+    Carrier c1 = new Carrier(100000, 7500);
+    Carrier c2 = new Carrier(100000, 4800);
     
     for (int i = 0; i < 30; i++) {
       Aircraft a1 = new F16();
@@ -16,13 +16,19 @@ public class Main {
       c2.add(a1);
     }
     
-    c1.fill(100);
-    c2.fill(75);
-    
+    c1.fill(7);
+    c2.fill(7);
+  
+  
     c1.getStatus();
     c2.getStatus();
     
+   // c1.getStatus();
+   // c2.getStatus();
+    
     c1.fight(c2);
+    c2.fight(c1);
+    
   }
   
 }

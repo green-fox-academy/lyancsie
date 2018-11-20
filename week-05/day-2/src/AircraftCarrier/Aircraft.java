@@ -8,6 +8,10 @@ public abstract class Aircraft {
   private int ammoStore;
   protected boolean priority;
   
+  public int getMaxAmmo() {
+    return maxAmmo;
+  }
+  
   public int getAmmoStore() {
     return ammoStore;
   }
@@ -28,8 +32,13 @@ public abstract class Aircraft {
     this.priority = priority;
   }
   
-  void refill() {
-      ammoStore = maxAmmo;
+  void refill(int ammo) {
+    if (ammo >= maxAmmo) {
+      ammoStore = ammo;
+      ammo -= ammoStore;
+    }
+    ammoStore += ammo;
+    return;
   }
   
   private String getType() {
