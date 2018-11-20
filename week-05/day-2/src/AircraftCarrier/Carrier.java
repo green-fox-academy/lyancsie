@@ -5,27 +5,27 @@ import java.util.List;
 
 public class Carrier {
   
-  private int ammo;
+  private int storeOfAmmo;
   private int hitPoints;
   
   public int getAmmo() {
-    return ammo;
+    
+    return storeOfAmmo;
   }
   
   public void setAmmo(int ammoToFill) {
-    while (this.ammo > 0) {
+    if (this.storeOfAmmo > 0) {
       for (Aircraft aSquad : squad) {
         aSquad.refill(ammoToFill);
       }
     }
-    
   }
   
   private List<Aircraft> squad;
   
-  Carrier(int ammo, int hitPoints) {
+  Carrier(int carrierAmmo, int hitPoints) {
     this.hitPoints = hitPoints;
-    this.ammo = ammo;
+    this.storeOfAmmo = carrierAmmo;
     squad = new ArrayList<Aircraft>();
   }
   
@@ -34,25 +34,27 @@ public class Carrier {
     squad.add(newAircraft);
   }
   
-  public void fill(int ammo) {
+  void fill() {
     
     for (Aircraft aSquad : squad) {
-      if (ammo > 0) {
-        if (this.ammo >= aSquad.getAmmoStore()) {
-            if (aSquad.isPriority()) {
-              aSquad.refill(ammo);
-              this.ammo -= aSquad.getAmmoStore();
-              ammo -= aSquad.getAmmoStore();
-            }
+      if (storeOfAmmo > 0) {
+        if (aSquad.isPriority()) {
+          storeOfAmmo -= aSquad.getMaxAmmo() - aSquad.getAmmoStore();
+          aSquad.refill(storeOfAmmo);
+          if (storeOfAmmo <= 0) {
+            break;
           }
         }
       }
+    }
     
     for (Aircraft aSquad : squad) {
-      if (ammo > 0) {
-        if (this.ammo >= aSquad.getAmmoStore()) {
-          aSquad.refill(ammo);
-          ammo -= aSquad.getAmmoStore();
+      if (storeOfAmmo > 0) {
+        if (!aSquad.isPriority())
+        storeOfAmmo -= aSquad.getMaxAmmo() - aSquad.getAmmoStore();
+        aSquad.refill(storeOfAmmo);
+        if (storeOfAmmo <= 0) {
+          break;
         }
       }
     }
@@ -74,7 +76,7 @@ public class Carrier {
         maxDmg += aSquad.getAmmoStore() * aSquad.getBaseDmg();
         aSquad.getStatus();
       }
-      System.out.println("Type: " + getClass().getName() + " Aircraft count: " + squad.size() + " Ammo storage: " + ammo + " Total damage: " + maxDmg);
+      System.out.println("Type: " + getClass().getName() + " Aircraft count: " + squad.size() + " Ammo storage: " + storeOfAmmo + " Total damage: " + maxDmg);
     }
   }
 }

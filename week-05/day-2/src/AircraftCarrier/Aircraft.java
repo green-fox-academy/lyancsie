@@ -3,7 +3,6 @@ package AircraftCarrier;
 public abstract class Aircraft {
   
   private int maxAmmo;
-  
   private int baseDmg;
   private int ammoStore;
   protected boolean priority;
@@ -33,16 +32,17 @@ public abstract class Aircraft {
   }
   
   int refill(int ammo) {
-    if (ammo <= maxAmmo) {
+    if (ammo <= maxAmmo && ammo>0) {
       ammoStore = ammo;
-      ammo = 0 ;
+      ammo = 0;
     }
-    if (ammo >= maxAmmo) {
-      ammo -= maxAmmo - this.getAmmoStore();
+    if (ammo > maxAmmo) {
+      ammo -= maxAmmo - getAmmoStore();
       ammoStore = maxAmmo;
     }
     return ammo;
   }
+  
   private String getType() {
     return getClass().getSimpleName();
   }
