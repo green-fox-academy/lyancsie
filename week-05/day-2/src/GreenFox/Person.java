@@ -19,7 +19,7 @@ public class Person {
     gender = "male";
   }
   
-  public String indtroduce() {
+  public String introduce() {
     return "Hi, my name is " + name + " " + age + " " + gender;
   }
   
