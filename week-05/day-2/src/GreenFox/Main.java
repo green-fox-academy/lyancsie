@@ -1,5 +1,6 @@
 package GreenFox;
 
+import java.lang.String;
 import java.util.ArrayList;
 
 public class Main {
@@ -35,8 +36,8 @@ public class Main {
     }
     
     for (Person person : people) {
-      person.introduce();
-      person.getGoal();
+      System.out.println(person.introduce());;
+      System.out.println(person.getGoal());
     }
     
     Cohort awesome = new Cohort("AWESOME");
