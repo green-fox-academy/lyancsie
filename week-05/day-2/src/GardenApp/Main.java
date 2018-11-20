@@ -14,7 +14,7 @@ public class Main {
     myGarden.myPlants.add(blue);
     myGarden.myPlants.add(purple);
     myGarden.myPlants.add(orange);
-  
+    
     myGarden.needsWater();
     myGarden.watering(40);
     myGarden.needsWater();
