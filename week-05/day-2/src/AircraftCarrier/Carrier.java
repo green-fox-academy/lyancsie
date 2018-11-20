@@ -8,6 +8,18 @@ public class Carrier {
   private int ammo;
   private int hitPoints;
   
+  public int getAmmo() {
+    return ammo;
+  }
+  
+  public void setAmmo(int ammoToFill) {
+    while (this.ammo > 0) {
+      for (Aircraft aSquad : squad) {
+        aSquad.refill();
+      }
+    }
+  }
+  
   private List<Aircraft> squad;
   
   Carrier(int ammo, int hitPoints) {
@@ -21,30 +33,34 @@ public class Carrier {
     squad.add(newAircraft);
   }
   
-  public void fill() {
+  public void fill(int ammo) {
+    
     for (Aircraft aSquad : squad) {
-      try {
-        if (aSquad.isPriority()) {
+      if (ammo > 0 && this.ammo > 0) {
+        try {
+          if (aSquad.isPriority()) {
+            aSquad.refill();
+            this.ammo -= aSquad.getAmmoStore();
+            ammo -= aSquad.getAmmoStore();
+          }
           aSquad.refill();
+        } catch (Exception x) {
+          System.out.println("Error: not enough ammo to fill all aircrafts");
         }
-        aSquad.refill();
-      } catch (Exception x) {
-        System.out.println("Error: not enough ammo to fill all aircrafts");
       }
     }
-    
   }
   
   void fight(Carrier enemy) {
     for (Aircraft aSquad : squad) {
-      enemy.hitPoints -= aSquad.ammoStore * aSquad.baseDmg;
+      enemy.hitPoints -= aSquad.getAmmoStore() * aSquad.getBaseDmg();
     }
   }
   
   void getStatus() {
     int maxDmg = 0;
     for (Aircraft aSquad : squad) {
-      maxDmg += aSquad.ammoStore * aSquad.baseDmg;
+      maxDmg += aSquad.getAmmoStore() * aSquad.getBaseDmg();
     }
     System.out.println("Type: " + getClass().getName() + " Aircraft count: " + squad.size() + " Ammo storage: " + ammo + " Total damage: " + maxDmg);
     for (Aircraft aSquad : squad) {

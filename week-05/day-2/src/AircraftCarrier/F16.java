@@ -1,8 +1,8 @@
 package AircraftCarrier;
 
-public class F16 extends Aircraft {
+class F16 extends Aircraft {
   
-  public F16() {
+  F16() {
     super(8, 30, 0, false);
   }
 }

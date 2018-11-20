@@ -2,10 +2,19 @@ package AircraftCarrier;
 
 public abstract class Aircraft {
   
-  int maxAmmo;
-  int baseDmg;
-  int ammoStore;
+  private int maxAmmo;
+  
+  private int baseDmg;
+  private int ammoStore;
   protected boolean priority;
+  
+  public int getAmmoStore() {
+    return ammoStore;
+  }
+  
+  public int getBaseDmg() {
+    return baseDmg;
+  }
   
   Aircraft() {
     ammoStore = 0;
@@ -20,7 +29,7 @@ public abstract class Aircraft {
   }
   
   void refill() {
-    ammoStore = maxAmmo;
+      ammoStore = maxAmmo;
   }
   
   private String getType() {
