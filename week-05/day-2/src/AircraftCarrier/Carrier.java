@@ -8,14 +8,15 @@ public class Carrier {
   private int ammo;
   private int hitPoints;
   
-  private List<Aircraft> squad = new ArrayList<Aircraft>();
+  private List<Aircraft> squad;
   
-  public Carrier(int ammo, int hitPoints) {
+  Carrier(int ammo, int hitPoints) {
     this.hitPoints = hitPoints;
     this.ammo = ammo;
+    squad = new ArrayList<Aircraft>();
   }
   
-  public void add(Aircraft newAircraft) {
+  void add(Aircraft newAircraft) {
     
     squad.add(newAircraft);
   }
@@ -34,12 +35,13 @@ public class Carrier {
     
   }
   
-  public void fight(Carrier enemy) {
+  void fight(Carrier enemy) {
     for (Aircraft aSquad : squad) {
       enemy.hitPoints -= aSquad.ammoStore * aSquad.baseDmg;
     }
   }
-  public void getStatus(){
+  
+  void getStatus() {
     int maxDmg = 0;
     for (Aircraft aSquad : squad) {
       maxDmg += aSquad.ammoStore * aSquad.baseDmg;

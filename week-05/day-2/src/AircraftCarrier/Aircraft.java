@@ -12,6 +12,13 @@ public abstract class Aircraft {
     priority = false;
   }
   
+  public Aircraft(int maxAmmo, int baseDmg, int ammoStore, boolean priority) {
+    this.maxAmmo = maxAmmo;
+    this.baseDmg = baseDmg;
+    this.ammoStore = ammoStore;
+    this.priority = priority;
+  }
+  
   void refill() {
     ammoStore = maxAmmo;
   }
