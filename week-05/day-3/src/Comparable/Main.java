@@ -19,7 +19,7 @@ public class Main {
     
     System.out.println(dominoes);
   
-    Thing thing1 = new Thing("abc");
+    Thing thing1 = new Thing("wbc");
     Thing thing2 = new Thing ("are");
     Thing thing3 = new Thing ("qyz");
     Thing thing4 = new Thing ("Something important");
