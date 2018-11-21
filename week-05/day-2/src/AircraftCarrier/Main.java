@@ -3,8 +3,10 @@ package AircraftCarrier;
 public class Main {
   
   public static void main(String[] args) {
-    Carrier c1 = new Carrier(150, 12001);
-    Carrier c2 = new Carrier(100000, 12000);
+    Carrier c1 = new Carrier(53, 12001);
+    //System.out.println(c1.getAmmo());
+    Carrier c2 = new Carrier(200, 12000);
+    //System.out.println(c2.getAmmo());
     
     for (int i = 0; i < 5; i++) {
       Aircraft a1 = new F16();

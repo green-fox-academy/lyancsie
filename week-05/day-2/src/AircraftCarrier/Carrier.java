@@ -33,7 +33,7 @@ public class Carrier {
     
     squad.add(newAircraft);
   }
-  
+//TODO fill
   void fill() {
     
     for (Aircraft aSquad : squad) {
@@ -51,7 +51,7 @@ public class Carrier {
     for (Aircraft aSquad : squad) {
       if (storeOfAmmo > 0) {
         if (!aSquad.isPriority())
-        storeOfAmmo -= aSquad.getMaxAmmo() - aSquad.getAmmoStore();
+          storeOfAmmo -= aSquad.getMaxAmmo() - aSquad.getAmmoStore();
         aSquad.refill(storeOfAmmo);
         if (storeOfAmmo <= 0) {
           break;
@@ -59,11 +59,10 @@ public class Carrier {
       }
     }
   }
-  
+//TODO fight
   void fight(Carrier enemy) {
     for (Aircraft aSquad : squad) {
       enemy.hitPoints -= aSquad.getAmmoStore() * aSquad.getBaseDmg();
-      
     }
   }
   

@@ -8,7 +8,8 @@ public class Student extends Person{
     return "Be a junior software developer";
   }
   
-  public Student(String name, int age, String gender, String previousOrganization) {
+  
+  public Student(String name, int age, String gender, String previousOrganization)  {
     super(name, age, gender);
     this.previousOrganization = previousOrganization;
     skippedDays = 0;

@@ -32,7 +32,7 @@ public abstract class Aircraft {
   }
   
   int refill(int ammo) {
-    if (ammo <= maxAmmo && ammo>0) {
+    if (ammo <= maxAmmo && ammo > 0) {
       ammoStore = ammo;
       ammo = 0;
     }
@@ -44,6 +44,7 @@ public abstract class Aircraft {
   }
   
   private String getType() {
+    
     return getClass().getSimpleName();
   }
   
@@ -53,5 +54,11 @@ public abstract class Aircraft {
   
   boolean isPriority() {
     return priority;
+  }
+  
+  int fight() {
+    int temp = ammoStore;
+    ammoStore = 0;
+    return temp * baseDmg;
   }
 }
