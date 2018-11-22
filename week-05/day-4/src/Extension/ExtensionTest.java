@@ -72,12 +72,11 @@ class ExtensionTest {
   @Test
   void testMedian_five_unsorted() {
     assertEquals(5, extension.median(Arrays.asList(5, 10, 10, 1)));
-    
   }
   
   @Test
-  void testMedian_eight_unsorted(){
-    assertEquals(5 ,extension.median(Arrays.asList(0,10,2,20,3,30,4,40,5,50)));
+  void testMedian_eight_unsorted() {
+    assertEquals(5, extension.median(Arrays.asList(0, 10, 2, 20, 3, 30, 4, 40, 5, 50)));
   }
   
   @Test
@@ -119,5 +118,30 @@ class ExtensionTest {
   @Test
   void testTranslate_lagopus() {
     assertEquals("lavagovopuvus", extension.translate("lagopus"));
+  }
+  
+  @Test
+  void testTranslate_endsWithAVowel() {
+    assertEquals("lavabdava", extension.translate("labda"));
+  }
+  
+  @Test
+  void testTranslate_lastLetterIsASyllable() {
+    assertEquals("csuvuk", extension.translate("csuk"));
+  }
+  
+  @Test
+  void testTranslate_3similarVowels() {
+    assertEquals("csovokovolovom", extension.translate("csokolom"));
+  }
+  
+  @Test
+  void testTranslate_2similarvowels() {
+    assertEquals("kovokovo", extension.translate("kokok"));
+  }
+  
+  @Test
+  void testTranslate_1similarvowel() {
+    assertEquals("kavakovok", extension.translate("kakok"));
   }
 }

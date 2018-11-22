@@ -6,7 +6,7 @@ public class Fibonacci {
   
   }
   
-  public int fibonacci(int index){
+  public int fibonacci(int index) {
     if (index == 2) {
       return 1;
     } else if (index == 1) {
@@ -15,5 +15,4 @@ public class Fibonacci {
       return fibonacci(index - 1) + fibonacci(index - 2);
     }
   }
-  
 }

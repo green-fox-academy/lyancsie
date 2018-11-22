@@ -1,5 +1,6 @@
 package Extension;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -28,13 +29,14 @@ public class Extension {
     return pool.get((pool.size() - 1) / 2);
   }
   
-  boolean isVowel(char c) {
+  static boolean isVowel(char c) {
     return Arrays.asList('a', 'u', 'o', 'e', 'i').contains(c);
   }
   
-  String translate(String hungarian) {
+  public static String translate(String hungarian) {
     String teve = hungarian;
     int length = teve.length();
+    ArrayList<Character> changed = new ArrayList<>();
     for (int i = 0; i < length; i++) {
       char c = teve.charAt(i);
       if (isVowel(c)) {
@@ -44,5 +46,9 @@ public class Extension {
       }
     }
     return teve;
+  }
+  
+  public static void main(String[] args) {
+    System.out.println(translate("kokok"));
   }
 }
