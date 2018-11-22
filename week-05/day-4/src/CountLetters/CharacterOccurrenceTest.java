@@ -17,7 +17,6 @@ class CharacterOccurrenceTest {
   void setUp() {
     
     expectedMap = new HashMap<>();
-    
   }
   
   @Test
@@ -30,7 +29,7 @@ class CharacterOccurrenceTest {
   }
   
   @Test
-  void testEasyAssertFalse(){
+  void testEasyAssertFalse() {
     expectedMap.put('E', 1);
     expectedMap.put('a', 1);
     expectedMap.put('s', 1);
@@ -39,7 +38,7 @@ class CharacterOccurrenceTest {
   }
   
   @Test
-  void testIntentionallyNotWorking(){
+  void testIntentionallyNotWorking() {
     expectedMap.put('E', 1);
     expectedMap.put('a', 1);
     expectedMap.put('s', 1);
@@ -48,9 +47,9 @@ class CharacterOccurrenceTest {
   }
   
   @Test
-  void occurrenceMismatch(){
-    expectedMap.put('E',2);
-    expectedMap.put('a',1);
+  void occurrenceMismatch() {
+    expectedMap.put('E', 2);
+    expectedMap.put('a', 1);
     expectedMap.put('s', 1);
     expectedMap.put('y', 1);
     assertNotEquals(expectedMap, CharacterOccurrence.evaluateOccurrences("Easy"));
