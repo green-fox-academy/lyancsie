@@ -1,5 +1,7 @@
 package Sum;
 
+import org.junit.jupiter.api.function.Executable;
+
 import java.util.ArrayList;
 
 public class Sum {
@@ -10,12 +12,10 @@ public class Sum {
   
   public int sum(ArrayList<Integer> inputList) {
     int mySum = 0;
-    try()
+    
     for (int i = 0; i < inputList.size(); i++) {
       mySum += inputList.get(i);
     }
     return mySum;
-    
   }
-  
 }

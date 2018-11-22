@@ -15,6 +15,7 @@ class SumTest {
   
   @BeforeEach
   void setUp() {
+    
     testList = new ArrayList<Integer>();
   }
   
@@ -40,16 +41,6 @@ class SumTest {
     testList.add(-25);
     testList.add(100);
     testList.add(-50);
-    assertEquals(-25, mySum.sum(testList));
+    assertEquals(25, mySum.sum(testList));
   }
-  
-  @Test
-  void someNullsAdded() {
-    testList.add(null);
-    testList.add(25);
-    testList.add(10);
-    assertEquals(java.lang.NullPointerException, mySum.sum(testList));
-    
-  }
-  
 }
