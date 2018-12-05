@@ -1,15 +1,14 @@
 package xy.spring;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import xy.spring.Greeting.Greeting;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class Main {
   
-  @RequestMapping("/greetme")
-  public Greeting xyz() {
-    return new Greeting(1, "Hello world");
-    
+  @RequestMapping("/greeting")
+  public Greeting xyz(@RequestParam String x) {
+    return new Greeting(1, x);
   }
 }
