@@ -29,7 +29,7 @@ public class HomeController {
   
   @GetMapping("/mostexpensive")
   public String mostExpensive(Model model) {
-    model.addAttribute("average", shopItemList.mostExpensive().getAsDouble());
+    model.addAttribute("average", shopItemList.mostExpensive().findFirst().get().getName());
     return "webshop";
   }
   

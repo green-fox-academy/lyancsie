@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ShopItemList {
   
@@ -52,8 +53,8 @@ public class ShopItemList {
     return shopItemList.stream().mapToDouble(i -> (i.quantity)).average();
   }
   
-  public OptionalDouble mostExpensive() {
-    return shopItemList.stream().mapToDouble(i -> (i.price)).max();
+  public Stream<ShopItem> mostExpensive() {
+    OptionalDouble g = shopItemList.stream().mapToDouble(i -> (i.price)).max();
+    return shopItemList.stream().filter(i -> i.price == g.getAsDouble());
   }
 }
-
