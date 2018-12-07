@@ -9,6 +9,11 @@ public class Main {
   
   @RequestMapping("/greeting")
   public Greeting xyz(@RequestParam String x) {
-    return new Greeting(1, x);
+    return new Greeting(x);
   }
+  /*
+  @RequestMapping("/multiplelanguagegreeting")
+  public MultipleLanguageGreeting xyza(@RequestParam String a) {
+    return new MultipleLanguageGreeting();
+  }*/
 }

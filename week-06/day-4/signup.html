@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    
+<style>
+    input[type="submit"]{
+        background:Turquoise;
+        color:white;
+    }
+    p{
+        font-size: 24px;
+        font-family: cursive;
+        font-stretch:expanded;
+    }
+    .loginbutton{
+        font-size: 20px;
+        color:white;
+        border-radius: 15px;
+    }
+    #facebookbutton{
+        background:DodgerBlue;
+    }
+    #googlebutton{
+        background:Tomato;
+    }
+    #twitterbutton{
+        background:DarkTurquoise;
+    }
+    
+</style>
+<p>Sign up</p>    
+<table>
+<tr>
+<div>
+<td>
+<input type="name" id="name" placeholder="Username" name="name">
+</td>
+<td>
+<input class="loginbutton" id="googlebutton" type="submit" id="google" value="Log in with Google">
+</td>
+</div>
+</tr>
+
+<tr>
+<div>
+    <td>
+<input type="email" id="email" placeholder="E-mail" name="email">
+    </td>
+    <td>
+    <input class="loginbutton" id="facebookbutton" type="submit" id="facebook" value="Log in with Facebook">
+    </td>
+</div>
+</tr>
+    
+<tr>
+<div>
+<td>
+<input type="password" id="password" placeholder="Password" name="password">
+</td>
+<td>
+    <input class="loginbutton" id="twitterbutton" type="submit" id="twitter" value="Log in with Twitter">
+</td>
+</div>
+</tr>        
+<td>
+<input type="submit" value="Go" action="/xy.html" method="post">    
+</td>
+</table>
+</body>

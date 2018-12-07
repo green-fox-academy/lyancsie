@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<style>
+    input{
+        border-radius: 10px;
+    }
+    div {
+        font-family:sans-serif;
+        font-size: 16px;
+    }
+    input[type=submit]{
+        background: grey;
+        border-color:grey;
+    }
+    form:valid{
+        
+    }
+    form:invalid{
+        background:red;
+    }
+
+</style>
+    
+<body>
+  <form action="login.html" method=post>
+    <div>
+    Username:
+    <br>
+    <input type="text" id="username" name="username"><br>
+    </div>
+      
+    <div>
+    Password:
+    <br>
+    <input type="password" id="password" name="password">
+    </div>
+    
+    <br>
+      
+    <div>
+    <input type="submit" value="Login">
+    </div>
+  </form>
+</body>

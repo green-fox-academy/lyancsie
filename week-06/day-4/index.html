@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Table</title>
+  <style>
+    .my-table,
+    tr {
+      border: 1px solid grey;
+      border-radius: 1px;
+    }
+      thead {
+      }
+      .my-table{
+          width: 400px;
+      }
+    
+    thead {
+      background: black;
+      color:azure;
+      border: 0 px;
+      text-align:center;
+      border-bottom: 2px solid grey;
+
+    }
+      
+    th {
+      font-size: 30 px;
+      font-style: normal;
+        padding: 0px;
+    }
+    tr:nth-child(2n){
+          background: grey;
+      }
+      tr:first-child{
+          border-bottom: 2px solid grey;
+      }
+      tbody{
+          text-align:center;
+      }
+  </style>
+</head>
+<body>
+  <table class="my-table">
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Sales</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jan</td>
+        <td>$ 1,000</td>
+      </tr>
+      <tr>
+        <td>Feb</td>
+        <td>$ 20</td>
+      </tr>
+        <tr>
+        <td>March</td>
+        <td>$ 200</td>
+      </tr>
+      <tr>
+        <td>Apr</td>
+        <td>$ 50,000</td>
+      </tr>
+      <tr>
+        <td>May</td>
+        <td>$ 20</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

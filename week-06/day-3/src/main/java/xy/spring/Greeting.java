@@ -9,8 +9,7 @@ public class Greeting {
   
   private static AtomicLong x = new AtomicLong();
   
-  public Greeting(long longId, String content) {
-    this.id = longId;
+  public Greeting(String content) {
     this.content = content;
   }
   
