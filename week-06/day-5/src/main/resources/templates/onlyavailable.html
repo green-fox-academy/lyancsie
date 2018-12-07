@@ -17,19 +17,19 @@
 
     <tr>
         <td>
-            <button value="ONLY AVAILABLE" onclick="location.href='/available'">ONLY AVAILABLE</button>
+            <button value="ONLY AVAILABLE" onclick="location.href='/available'"></button>
         </td>
         <td>
-            <input type="submit" value="CHEAPEST FIRST" onclick="location.href='/cheapest'">
+            <input type="submit" value="CHEAPEST FIRST">
         </td>
         <td>
-            <input type="submit" value="CONTAINS NIKE " onclick="location.href='/contains'">
+            <input type="submit" value="CONTAINS NIKE">
         </td>
         <td>
-            <input type="submit" value="AVERAGE STOCK" onclick="location.href='/avg'">
+            <input type="submit" value="AVERAGE STOCK">
         </td>
         <td>
-            <input type="submit" value="MOST EXPENSIVE AVAILABLE" onclick="location.href='/mostexpensive'">
+            <input type="submit" value="MOST EXPENSIVE AVAILABLE">
         </td>
     </tr>
 </table>
@@ -56,11 +56,6 @@
         <td th:text="${item.getPrice()}"></td>
         <td th:text="${item.getQuantity()}"></td>
     </tr>
-
-    <tr>
-        <td th:text="${average}"></td>
-    </tr>
-
     </tbody>
 </table>
 </body>
