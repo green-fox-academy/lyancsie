@@ -7,9 +7,21 @@
 <body>
 
 <div th:each="element : ${account}" th:object="${element}">
-    <p th:text="|My name is *{name}|"></p>
-    <p th:text="|My balance is *{balance}|"></p>
-    <p th:text="|My type is *{animalType}|"></p>
+
+
+    <div th:style="*{isAKing} ? 'background-color:yellowgreen' : 'background-color:white'">
+        <td th:text="|Name: *{name}|"></td>
+        <td th:text="|Balance: *{balance}|"></td>
+        <td th:text="|Type: *{animalType}|"></td>
+        <td th:text="|King: *{isAKing}|"></td>
+    </div>
+    <div>
+        <!--        <input type="radio" name="" value=""> Increase -->
+
+
+    </div>
+    </tr>
+
 </div>
 </body>
 </html>

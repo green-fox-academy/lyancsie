@@ -12,7 +12,7 @@ public class HomeController {
   
   @GetMapping("/show")
   public String home(Model model) {
-    BankAccount simba07 = new BankAccount("Simba", 2000, "Lion");
+    BankAccount simba07 = new BankAccount("Simba", 2000, "Lion", false);
     model.addAttribute("simba", simba07);
     return "show";
   }
@@ -26,9 +26,9 @@ public class HomeController {
   @GetMapping("/multipleaccounts")
   public String multiple(Model model) {
     List bankAccounts = new ArrayList<>();
-    bankAccounts.add(new BankAccount("Geza", 250, "zebra"));
-    bankAccounts.add(new BankAccount("Ferenc", 2500, "dog"));
-    bankAccounts.add(new BankAccount("Armand", 25000, "kitten"));
+    bankAccounts.add(new BankAccount("Geza", 250, "zebra", false));
+    bankAccounts.add(new BankAccount("Ferenc", 2500, "dog", false));
+    bankAccounts.add(new BankAccount("Armand", 25000, "kitten", true));
     
     model.addAttribute("account", bankAccounts);
     return "multiple";
