@@ -1,17 +1,22 @@
 package greenfox.demo;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class BankAccount {
   
   private String name;
-  private int balance;
+  private double balance;
   private String animalType;
   
   public String getName() {
     return name;
   }
   
-  public int getBalance() {
-    return balance;
+  public String getBalance() {
+    //return balance;
+    NumberFormat formatter = new DecimalFormat("#0.00");
+    return formatter.format(balance);
   }
   
   public String getAnimalType() {

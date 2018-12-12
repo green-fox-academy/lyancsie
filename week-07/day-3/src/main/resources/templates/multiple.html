@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:each="element : ${account}" th:object="${element}">
+    <p th:text="|My name is *{name}|"></p>
+    <p th:text="|My balance is *{balance}|"></p>
+    <p th:text="|My type is *{animalType}|"></p>
+</div>
+</body>
+</html>
