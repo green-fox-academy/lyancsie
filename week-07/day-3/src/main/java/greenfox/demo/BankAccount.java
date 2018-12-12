@@ -2,9 +2,21 @@ package greenfox.demo;
 
 public class BankAccount {
   
-  String name;
-  int balance;
-  String animalType;
+  private String name;
+  private int balance;
+  private String animalType;
+  
+  public String getName() {
+    return name;
+  }
+  
+  public int getBalance() {
+    return balance;
+  }
+  
+  public String getAnimalType() {
+    return animalType;
+  }
   
   public BankAccount(String name, int balance, String animalType) {
     this.name = name;
