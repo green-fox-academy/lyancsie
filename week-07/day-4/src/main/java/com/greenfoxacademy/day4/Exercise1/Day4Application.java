@@ -15,6 +15,16 @@ public class Day4Application implements CommandLineRunner {
   MyColor redColor;
   @Autowired
   MyColor blueColor;
+  @Autowired
+  MyColor randomColor;
+  @Autowired
+  MyColor blackColor;
+  @Autowired
+  MyColor violet;
+  @Autowired
+  MyColor brown;
+  
+  @Autowired
   
   public static void main(String[] args) {
     SpringApplication.run(Day4Application.class, args);
@@ -22,9 +32,14 @@ public class Day4Application implements CommandLineRunner {
   
   @Override
   public void run(String... args) throws Exception {
-    printer.log("XXyz");
+    
+    printer.printColor();
     redColor.printColor();
     blueColor.printColor();
+    randomColor.printColor();
+    blackColor.printColor();
+    violet.printColor();
+    brown.printColor();
   }
 }
 
