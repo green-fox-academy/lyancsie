@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Coloured</title>
+</head>
+<body th:style="'background-color:'  + *{randomcolor}">
+<p> Some nice text</p>
+<p th:text="'The coded text is: ' + *{codedtext}"></p>
+<p th:text="'The decoded text is: ' + *{decodedtext}"></p>
+
+</body>
+</html>
