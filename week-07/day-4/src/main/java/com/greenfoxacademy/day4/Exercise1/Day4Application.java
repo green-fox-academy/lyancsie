@@ -9,22 +9,24 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Day4Application implements CommandLineRunner {
   
-  @Autowired
   Printer printer;
-  @Autowired
   MyColor redColor;
-  @Autowired
   MyColor blueColor;
-  @Autowired
   MyColor randomColor;
-  @Autowired
   MyColor blackColor;
-  @Autowired
   MyColor violet;
-  @Autowired
   MyColor brown;
   
   @Autowired
+  public Day4Application(Printer printer, MyColor redColor, MyColor blueColor, MyColor randomColor, MyColor blackColor, MyColor violet, MyColor brown) {
+    this.violet = violet;
+    this.blackColor = blackColor;
+    this.blueColor = blueColor;
+    this.randomColor = randomColor;
+    this.printer = printer;
+    this.redColor = redColor;
+    this.brown = brown;
+  }
   
   public static void main(String[] args) {
     SpringApplication.run(Day4Application.class, args);
