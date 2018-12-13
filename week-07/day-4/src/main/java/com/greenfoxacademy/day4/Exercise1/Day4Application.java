@@ -14,12 +14,10 @@ public class Day4Application implements CommandLineRunner {
   MyColor blueColor;
   MyColor randomColor;
   MyColor blackColor;
-  MyColor violet;
   MyColor brown;
   
   @Autowired
-  public Day4Application(Printer printer, MyColor redColor, MyColor blueColor, MyColor randomColor, MyColor blackColor, MyColor violet, MyColor brown) {
-    this.violet = violet;
+  public Day4Application(Printer printer, MyColor redColor, MyColor blueColor, MyColor randomColor, MyColor blackColor, MyColor brown) {
     this.blackColor = blackColor;
     this.blueColor = blueColor;
     this.randomColor = randomColor;
@@ -40,7 +38,6 @@ public class Day4Application implements CommandLineRunner {
     blueColor.printColor();
     randomColor.printColor();
     blackColor.printColor();
-    violet.printColor();
     brown.printColor();
   }
 }
