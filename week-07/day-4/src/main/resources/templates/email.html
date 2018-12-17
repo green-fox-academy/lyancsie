@@ -6,5 +6,9 @@
 </head>
 <body>
 <p th:text="*{valid}"></p>
+<form th:action="@{/useful/email}" th:method="post">
+    <input th:object="${nameinthehtml}" placeholder="Write it here..." name="nameinthehtml">
+    <input type="submit" value="Send">
+</form>
 </body>
 </html>
