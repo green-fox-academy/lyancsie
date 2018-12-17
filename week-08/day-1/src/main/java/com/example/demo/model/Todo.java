@@ -1,27 +1,24 @@
 package com.example.demo.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "todos")
 public class Todo {
   
-  @Getter
-  @Setter
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-  @Getter
-  @Setter
   @Column(name = "title")
   private String title;
-  @Getter
-  @Setter
   @Column(name = "urgent")
   private boolean urgent;
+  
+  public Todo(String title, boolean urgent, boolean done) {
+    this.title = title;
+    this.urgent = urgent;
+    this.done = done;
+  }
   
   public Long getId() {
     return id;
@@ -39,7 +36,7 @@ public class Todo {
     this.title = title;
   }
   
-  public boolean isUrgent() {
+  public boolean getUrgent() {
     return urgent;
   }
   
@@ -47,7 +44,7 @@ public class Todo {
     this.urgent = urgent;
   }
   
-  public boolean isDone() {
+  public boolean getDone() {
     return done;
   }
   
@@ -55,13 +52,12 @@ public class Todo {
     this.done = done;
   }
   
-  @Getter
-  @Setter
   @Column(name = "done")
   private boolean done;
   
   public Todo() {
-  
+    urgent = false;
+    done = false;
   }
   
   public Todo(Long id, String title) {
@@ -73,5 +69,8 @@ public class Todo {
   
   public Todo(String title) {
     this.title = title;
+    urgent = false;
+    done = false;
   }
+  
 }

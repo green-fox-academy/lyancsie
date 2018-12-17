@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.example.demo.model.Todo;
 import com.example.demo.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -23,9 +22,9 @@ public class DemoApplication implements CommandLineRunner {
   
   @Override
   public void run(String... args) throws Exception {
-    repository.save(new Todo("I'm a cool guy"));
+/*  repository.save(new Todo("I'm a cool guy"));
     repository.save(new Todo("Life is easy, innit"));
-    repository.save(new Todo("Jesus was not real"));
+    repository.save(new Todo("Jesus was not real"));*/
   }
 }
 
