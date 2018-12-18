@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{edit}" th:object=${taskToEdit}>
+    <input type="text" th:value="${taskToEdit.title}" name="title">
+    <p>Urgent:</p>
+    <input type="checkbox" name="urgent" th:field="${taskToEdit.urgent}">
+    <p>Done:</p>
+    <input type="checkbox" name="done" th:field="${taskToEdit.done}">
+    <br>
+    <input type="submit" value="Edit">
+</form>
+</body>
+</html>

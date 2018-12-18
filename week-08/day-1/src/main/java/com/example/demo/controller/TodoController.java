@@ -49,9 +49,21 @@ public class TodoController {
     return ("redirect:/todo/list");
   }
   
-  @GetMapping("/delete")
+  @GetMapping("/{id}/delete")
   public String delete(@PathVariable Long id) {
     repository.delete(repository.findById(id).get());
+    return ("redirect:/todo/list");
+  }
+  
+  @GetMapping("/{id}/edit")
+  public String edit(@PathVariable Long id, Model model) {
+    model.addAttribute("taskToEdit", repository.findById(id).get());
+    return "edit";
+  }
+  
+  @PostMapping("/{id}/edit")
+  public String editPost(@ModelAttribute Todo taskToEdit) {
+    repository.save(taskToEdit);
     return ("redirect:/todo/list");
   }
 }
