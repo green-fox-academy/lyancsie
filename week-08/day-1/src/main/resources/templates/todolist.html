@@ -6,6 +6,8 @@
 </head>
 <body>
 <h1>TODOS FOR TODAY:</h1>
+<a th:href="@{../assignees}">Assignees</a>
+<br>
 <a th:href="@{add}">Add new</a>
 <form th:action="@{list}" th:method="GET">
     <input type="text" placeholder="Write here..." th:name="whattosearch">
