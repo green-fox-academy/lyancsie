@@ -23,8 +23,18 @@ public class TodoController {
   }
   
   @GetMapping("/list")
-  public String list(Model model) {
-    model.addAttribute("todos", repository.findAll());
+  public String list(Model model, @RequestParam(required = false) String whattosearch, @RequestParam(required = false) String basedon) {
+    
+    if (whattosearch == null) {
+      model.addAttribute("todos", repository.findAllByOrderByIdAsc());
+    } else {
+      if (basedon.equals("title")) {
+        model.addAttribute("todos", repository.findTodoByTitleContainsOrderByIdAsc(whattosearch));
+      }
+      if (basedon.equals("description")) {
+        model.addAttribute("todos", repository.findTodoByDescriptionContainsOrderByIdAsc(whattosearch));
+      }
+    }
     return "todolist";
   }
   
@@ -64,6 +74,12 @@ public class TodoController {
   @PostMapping("/{id}/edit")
   public String editPost(@ModelAttribute Todo taskToEdit) {
     repository.save(taskToEdit);
+    return ("redirect:/todo/list");
+  }
+  
+  @GetMapping("/search")
+  public String search(@ModelAttribute String whattosearch, Model model) {
+    model.addAttribute("whattosearch", repository.findTodoByTitleContainsOrderByIdAsc(whattosearch));
     return ("redirect:/todo/list");
   }
 }

@@ -7,6 +7,14 @@
 <body>
 <h1>TODOS FOR TODAY:</h1>
 <a th:href="@{add}">Add new</a>
+<form th:action="@{list}" th:method="GET">
+    <input type="text" placeholder="Write here..." th:name="whattosearch">
+    <select th:name="basedon">
+        <option th:value="title">Title</option>
+        <option th:value="content">Content</option>
+        <option th:value="description">Description</option>
+    </select>
+</form>
 <table>
     <thead>
     <tr>
@@ -14,16 +22,18 @@
         <th>TITLE</th>
         <th>URGENT</th>
         <th>DONE</th>
+        <th>DESCRIPTION</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="todo : ${todos}">
-        <td th:text="${todo.id}"></td>
-        <td th:text="${todo.title}"></td>
-        <td th:text="${todo.urgent}"></td>
-        <td th:text="${todo.done}"></td>
-        <td><a th:href="|${todo.id}/delete|">DELETE</a></td>
-        <td><a th:href="|${todo.id}/edit|">EDIT</a></td>
+    <tr th:each="todo : ${todos}" th:object="${todo}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{title}"></td>
+        <td th:text="*{urgent}"></td>
+        <td th:text="*{done}"></td>
+        <td th:text="*{description}"></td>
+        <td><a th:href="|*{id}/delete|">DELETE</a></td>
+        <td><a th:href="|*{id}/edit|">EDIT</a></td>
     </tr>
     </tbody>
 </table>

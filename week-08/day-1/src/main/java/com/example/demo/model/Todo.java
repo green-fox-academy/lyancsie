@@ -13,11 +13,38 @@ public class Todo {
   private String title;
   @Column(name = "urgent")
   private boolean urgent;
+  @Column(name = "done")
+  private boolean done;
+  @Column(name = "description")
+  private String description;
   
-  public Todo(String title, boolean urgent, boolean done) {
+  public Todo(String title, boolean urgent, boolean done, String description) {
     this.title = title;
     this.urgent = urgent;
     this.done = done;
+    this.description = description;
+  }
+  
+  public Todo() {
+    urgent = false;
+    done = false;
+    description = "not available";
+  }
+  
+  public Todo(Long id, String title) {
+    this.id = id;
+    this.title = title;
+    urgent = false;
+    done = false;
+    description = "not available";
+    
+  }
+  
+  public Todo(String title) {
+    this.title = title;
+    urgent = false;
+    done = false;
+    description = "not available";
   }
   
   public Long getId() {
@@ -52,25 +79,11 @@ public class Todo {
     this.done = done;
   }
   
-  @Column(name = "done")
-  private boolean done;
-  
-  public Todo() {
-    urgent = false;
-    done = false;
+  public String getDescription() {
+    return description;
   }
   
-  public Todo(Long id, String title) {
-    this.id = id;
-    this.title = title;
-    urgent = false;
-    done = false;
+  public void setDescription(String description) {
+    this.description = description;
   }
-  
-  public Todo(String title) {
-    this.title = title;
-    urgent = false;
-    done = false;
-  }
-  
 }
