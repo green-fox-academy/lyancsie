@@ -1,7 +1,9 @@
-[lyancsie.io repo](https://github.com/lyancsie/lyancsie.github.io)
+[Wanderer repo](https://github.com/lyancsie/wanderer-java)
 
-[git lesson repo](https://github.com/lyancsie/git-lesson-repository)
+[reddit_clone repo](https://github.com/lyancsie/reddit_clone)
 
-[first webpage repo](https://github.com/lyancsie/first-webpage)
+[todo repo]()
 
-[patchwork repo](https://github.com/lyancsie/patchwork)
+[webshop repo](https://github.com/lyancsie/webshop)
+
+[lambdas, streams repo](https://github.com/lyancsie/lambdas-streams)
