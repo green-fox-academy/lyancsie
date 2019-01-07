@@ -9,18 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ArrayController {
   
   @PostMapping("/arrays")
-  public Object arrays(@RequestBody(required = false) CustomArray customArray) {
-    if (customArray.getWhat().equals("sum")) {
-    
-    }
-    if (customArray.getWhat().equals("multiply")) {
-      int result = 1;
-      for (int i = 0; i < customArray.getArray().length; i++) {
-      }
-    }
-    
+  public Object arrays(@RequestBody CustomArray customArray) {
+    customArray.decide();
     return customArray;
   }
-}
-  
 }

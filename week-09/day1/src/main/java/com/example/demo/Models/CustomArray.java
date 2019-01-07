@@ -9,16 +9,42 @@ public class CustomArray {
   
   private String what;
   private Integer[] array;
+  private Object result;
   
-  public Integer decide() {
-    if (what.equals("double"))
+  public void decide() {
+    if (what.equals("multiply")) {
+      multiply();
+    }
+    if (what.equals("sum")) {
+      sum();
+    }
+    if (what.equals("double")) {
+      twoTimes();
+    }
   }
   
-  public Integer[] twoTimes() {
+  private void twoTimes() {
+    int[] resultArray = new int[array.length];
     for (int i = 0; i < array.length; i++) {
       DoubledValue temp = new DoubledValue(array[i]);
-      array[i] = temp.getResult();
+      resultArray[i] = temp.getResult();
     }
-    
+    result = resultArray;
+  }
+  
+  private void multiply() {
+    int i = 1;
+    for (int j = 0; j < array.length; j++) {
+      i *= array[j];
+    }
+    result = i;
+  }
+  
+  private void sum() {
+    int i = 0;
+    for (int j = 0; j < array.length; j++) {
+      i += array[j];
+    }
+    result = i;
   }
 }
