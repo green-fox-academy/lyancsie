@@ -1,4 +1,4 @@
-[Advanced practice repo] (https://github.com/lyancsie/) -> Functional interfaces, Optionals, Generics, Guava
+[Advanced practice repo](https://github.com/lyancsie/) -> Functional interfaces, Optionals, Generics, Guava
 
 [Wanderer repo](https://github.com/lyancsie/wanderer-java)
 
