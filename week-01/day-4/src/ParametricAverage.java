@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class ParametricAverage {
+  
   public static void main(String[] args) {
     Scanner read = new Scanner(System.in);
     int sum = 0;

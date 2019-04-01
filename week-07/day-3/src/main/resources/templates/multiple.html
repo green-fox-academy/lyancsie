@@ -8,20 +8,36 @@
 
 <div th:each="element : ${account}" th:object="${element}">
 
-
     <div th:style="*{isAKing} ? 'background-color:yellowgreen' : 'background-color:white'">
-        <td th:text="|Name: *{name}|"></td>
-        <td th:text="|Balance: *{balance}|"></td>
-        <td th:text="|Type: *{animalType}|"></td>
-        <td th:text="|King: *{isAKing}|"></td>
+        <tr>
+            <td th:text="|Name: *{name}|"></td>
+            <td th:text="|Balance: *{balance}|"></td>
+            <td th:text="|Type: *{animalType}|"></td>
+            <td th:text="|King: *{isAKing}|"></td>
+        </tr>
+        <tr>
+
+
+        </tr>
+
     </div>
+
     <div>
         <!--        <input type="radio" name="" value=""> Increase -->
-
-
     </div>
     </tr>
 
+
 </div>
+<form action="#" th:action="@{/multipleaccounts}" th:method="post">
+    <select name="which" th:field="${which.myString}">
+
+        <option th:each="element : ${account}" th:object="${element}" th:value="*{name}" th:text="*{name}"></option>
+    </select>
+
+    <input type="submit" value="Submit">
+
+</form>
+
 </body>
 </html>

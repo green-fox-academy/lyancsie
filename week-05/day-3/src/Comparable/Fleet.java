@@ -1,8 +1,10 @@
 package Comparable;
 
+import Printable.Printable;
+
 import java.util.ArrayList;
 
-public class Fleet implements Comparable {
+public class Fleet implements Comparable, Printable {
   
   private ArrayList<Thing> things;
   
@@ -30,6 +32,11 @@ public class Fleet implements Comparable {
   @Override
   public int compareTo(Object o) {
     return 0;
+  }
+  
+  @Override
+  public void printAllFields() {
+  
   }
 }
 

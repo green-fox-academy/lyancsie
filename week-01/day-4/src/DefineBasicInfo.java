@@ -1,4 +1,5 @@
 public class DefineBasicInfo {
+  
   public static void main(String[] args) {
     // Define several things as a variable then print their value
     // Your name as a string

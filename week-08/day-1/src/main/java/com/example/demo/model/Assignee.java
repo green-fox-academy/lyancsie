@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "assignees")
@@ -12,6 +13,16 @@ public class Assignee {
   
   private String name;
   private String mail;
+  
+  @OneToMany(
+      mappedBy = "assignee",
+      cascade = CascadeType.ALL,
+      orphanRemoval = true
+  )
+  private List<Todo> todoList;
+ /* @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "id")
+  private Todo todo;*/
   
   public Assignee() {
   }

@@ -13,7 +13,6 @@
     <input type="text" placeholder="Write here..." th:name="whattosearch">
     <select th:name="basedon">
         <option th:value="title">Title</option>
-        <option th:value="content">Content</option>
         <option th:value="description">Description</option>
     </select>
 </form>
@@ -25,6 +24,7 @@
         <th>URGENT</th>
         <th>DONE</th>
         <th>DESCRIPTION</th>
+        <th>ASSIGNEE NAME</th>
     </tr>
     </thead>
     <tbody>
@@ -34,6 +34,8 @@
         <td th:text="*{urgent}"></td>
         <td th:text="*{done}"></td>
         <td th:text="*{description}"></td>
+        <td th:text="${todo.assignee.name}"></td>
+        </td>
         <td><a th:href="|*{id}/delete|">DELETE</a></td>
         <td><a th:href="|*{id}/edit|">EDIT</a></td>
     </tr>

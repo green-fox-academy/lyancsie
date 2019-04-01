@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>
+        <a th:href="@{/login}">Login</a>
+    </li>
+    <li>
+        <p>Information</p>
+    </li>
+</ul>
+<img th:text src="greenfox.png" alt="GFA">
+<p th:text="'Name: '+ ${name}"></p>
+<p>Some random text, because it's needed.</p>
+<h1>Known tricks</h1>
+<ul>
+    <li>Write html</li>
+    <li>Code in Java</li>
+</ul>
+</body>
+</html>

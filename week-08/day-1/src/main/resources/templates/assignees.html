@@ -17,6 +17,8 @@
         <td th:text="*{id}"></td>
         <td th:text="*{name}"></td>
         <td th:text="*{mail}"></td>
+        <td><a th:href="|assignees/*{id}/delete|">DELETE</a></td>
+        <td><a th:href="|assignees/*{id}/edit|">EDIT</a></td>
     </tbody>
 
 </table>

@@ -34,16 +34,16 @@ public class CustomArray {
   
   private void multiply() {
     int i = 1;
-    for (int j = 0; j < array.length; j++) {
-      i *= array[j];
+    for (Integer anArray : array) {
+      i *= anArray;
     }
     result = i;
   }
   
   private void sum() {
     int i = 0;
-    for (int j = 0; j < array.length; j++) {
-      i += array[j];
+    for (Integer anArray : array) {
+      i += anArray;
     }
     result = i;
   }

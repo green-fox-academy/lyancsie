@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class SecondsInADay {
+  
   public static void main(String[] args) {
     Scanner read = new Scanner(System.in);
     System.out.println("Current hours: ");
@@ -9,7 +10,7 @@ public class SecondsInADay {
     int currentMinutes = read.nextInt();
     System.out.println("Current seconds: ");
     int currentSeconds = read.nextInt();
-
+    
     int totalTime = 24 * 60 * 60;
     int passedTime = (currentSeconds + currentMinutes * 60 + currentHours * 60 * 60);
     int remainingTime = totalTime - passedTime;

@@ -23,7 +23,7 @@ public class HomeController {
   
   @GetMapping("/cheapest")
   public String cheapest(Model model) {
-    model.addAttribute("shopItems", shopItemList.cheapestFirst());
+    //model.addAttribute("shopItems", shopItemList.cheapestFirst());
     return "webshop";
   }
   

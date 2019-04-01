@@ -38,11 +38,15 @@ public class ShopItemList {
         .collect(Collectors.toList());
   }
   
-  public List<ShopItem> cheapestFirst() {
-    /*return shopItemList.stream()
+  /*public List<ShopItem> cheapestFirst() {
+    return shopItemList.stream()
         .sorted(Comparator.reverseOrder(shopItemList));*/
-    return shopItemList;
-  }
+ /*   List result = getShopItemList().stream().sorted((o1, o2) -> o1.
+        compareTo((o2)).
+        collect(Collectors.toList()));
+    
+    return result;
+  }*/
   
   public List<ShopItem> contains() {
     //shopItemList.stream().

@@ -1,4 +1,4 @@
-package com.example.demo.Models;
+/*package com.example.demo.Models;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -20,6 +20,5 @@ public class Log {
     this.data = data;
     createdAt = new Date();
   }
-  //will have implemented using prototype
-  
-}
+//factory???
+}*/

@@ -1,4 +1,5 @@
 public class ConditionalVariableMutation {
+  
   public static void main(String[] args) {
     double a = 24;
     int out = 0;
@@ -19,8 +20,7 @@ public class ConditionalVariableMutation {
     } else {
       System.out.println("More");
     }
-
-
+    
     int c = 123;
     int credits = 100;
     boolean isBonus = false;
@@ -32,13 +32,11 @@ public class ConditionalVariableMutation {
     if (isBonus = false) {
       if (credits >= 50) {
         c -= 2;
-      } else {
-        c -= 1;
       }
+      c -= 1;
       System.out.println(c);
     }
-
-
+    
     int d = 8;
     int time = 120;
     String out3 = "";
@@ -52,10 +50,9 @@ public class ConditionalVariableMutation {
       out3 = "check";
     } else if (time > 200) {
       out3 = "Time out";
-    } else {
-      out3 = "Run Forest Run!";
     }
-
+    out3 = "Run Forest Run!";
+    
     System.out.println(out3);
   }
 }

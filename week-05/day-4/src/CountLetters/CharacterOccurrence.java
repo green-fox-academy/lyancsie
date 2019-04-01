@@ -13,11 +13,7 @@ public class CharacterOccurrence {
     HashMap<Character, Integer> occurrence = new HashMap<>();
     
     for (int i = 0; i < input.length(); i++) {
-      if (!occurrence.containsKey(input.charAt(i))) {
-        occurrence.put((input.charAt(i)), 1);
-      } else {
-        occurrence.put((input.charAt(i)), occurrence.get(input.charAt(i)));
-      }
+      occurrence.put((input.charAt(i)), occurrence.getOrDefault(input.charAt(i), 1));
     }
     return occurrence;
   }

@@ -1,6 +1,8 @@
 package Comparable;
 
-public class Domino implements Comparable {
+import Printable.Printable;
+
+public class Domino implements Comparable, Printable {
   
   private final int left;
   private final int right;
@@ -31,5 +33,10 @@ public class Domino implements Comparable {
     } else if (this.getLeftSide() == myDomino.getLeftSide()) {
       return 0;
     } else return 1;
+  }
+  
+  @Override
+  public void printAllFields() {
+  
   }
 }
